@@ -97,7 +97,7 @@ The three most common pollutants for dammed rivers, however, are Sedimentation/S
 ![alt text](img/strat.png "Title")
 
 
-When a stratified reservoir 'turns over', it's sediment along with all the polltants trapped inside are brought to the top and are discharged downstream. Mercury, toxicity, and sediment are all common pollutants of this cycle. 
+When a stratified reservoir 'turns over' as the weather warms, its sediment along with all the pollutants trapped inside it are cycled through the reservoir and discharged downstream. High levels of mercury, toxicity, and sediment are all common pollutants of this cycle. 
 
 ## Effects of TMDLs on Dammed Rivers
 
