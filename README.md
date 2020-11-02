@@ -65,14 +65,14 @@ There are over 1,500 named dams in California, so there aren't many stretches of
 
 I am not able to do this with the tools at my disposal, so I will be considering all tributaries of dammed rivers to be undammed.
 
-![alt text](img/data_overview.png "Title")
+<img src="img/counts.png" width="800" align="center"/>
 
 
 ## Do Dammed Rivers Have a Higher Number of Average Pollutants?  
 
 
-![alt text](img/hist_natural.png "Title")
-![alt text](img/hist_dammed.png "Title")
+<img src="img/hist_counts.png" width="800" align="center"/>
+
 
 It looks like both dammed and natural rivers display very similar. There are a few outliers with 15-20 pollutants, but most impaired rivers only seem to contain one to three pollutants. A bootstraped plot of the mean number of pollutants shows that both dammed and natural rivers have a mean number of pollutants of around 3.40.
 
@@ -82,15 +82,18 @@ It looks like both dammed and natural rivers display very similar. There are a f
 
 ## Do Dammed Rivers and Natural Rivers Suffer From Different Types of Pollutants?
 
-![alt text](img/top_poll.png "Title")
+<img src="img/15_potent.png" width="1000" align="center"/>
 
-Here we see the fifteen most common pollutants in dammed and natural rivers. Something immediately jumps out:
-The three most common pollutants for natural rivers are Fecal Coliform, E. coli, and Diazinon. All these pollutants are the result of things being dumped in rivers that shouldn't be. 
+Here we see the fifteen most common pollutants in dammed and natural rivers. Something interesting is showing up here - let's get a closer look at the top three pollutants for dammed and natural rivers:
 
-The three most common pollutants for dammed rivers, however, are Sedimentation/Siltation, Unkown Toxicity, and Mercury. These pollutants are all byproducts of stratified reservoirs and cannot be improved by preventing the continual addition of pollutants to our waters.
+<img src="img/3_potent.png" width="800" align="center"/>
 
-# Are We Helping Our Dammed Rivers?
------
+### Here is what I'm seeing:
+- The three most common pollutants for natural rivers are Fecal Coliform, E. coli, and Diazinon. All these pollutants are point sources. They can be traced back to a defined origin.
+
+- The three most common pollutants for dammed rivers, however, are Sedimentation/Siltation, Unkown Toxicity, and Mercury. These pollutants can not be easily classified as point sources, and furthermore they are all byproducts of stratified reservoirs. This indicates that the implementaion of TMDLs may not be enough to improve the water quality of these rivers. 
+
+----------
 
 ## How Dams Change Our Water's Chemistry
 
@@ -117,11 +120,8 @@ A few considerations I observed when classifying pollutants:
 Now that we've classified all the most common pollutants in dammed and natural rivers, we can visualize what percentage of rivers that contain these pollutants will benefit from TMDLs: 
 
 
+<img src="img/tmdl_prop.png" width="800" align="center"/>
 
-![alt text](img/undammed.png "Title")
-
-
-![alt text](img/dammed.png "Title")
 
 
 # Final Thoughts
