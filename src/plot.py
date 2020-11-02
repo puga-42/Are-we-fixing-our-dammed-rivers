@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+# from src.helpers import *
+from scipy import stats
 
 colors_list = ['#71C348', '#48A9C3']
 
@@ -9,7 +11,7 @@ plt.style.use('ggplot')
 
 def plot_water_bodies(lst, title='Counts of Water Body Types in 303(d) Data', size=(14, 5)):
     '''
-        Prints a barchart of entries per water body in 303(d) list
+        plots a barchart of entries per water body in 303(d) list
         
         ARGS:
             x - list
@@ -34,6 +36,16 @@ def plot_water_bodies(lst, title='Counts of Water Body Types in 303(d) Data', si
 
 
 def plot_most_potent_stacked_bar(data_dict):
+    '''
+        Plots a stacked bar graph of the 15 most common pollutants and
+        whether they can be solved by TMDLs
+
+        ARGS:
+            data_dict - dictionary with keys = pollutants, 
+            values = counts of ppollutants
+        Returns:
+            none. Plots stacked bar chart
+    '''
     fig, ax = plt.subplots(figsize=(9, 7))
     r = [0,1]
 
@@ -68,6 +80,16 @@ def plot_most_potent_stacked_bar(data_dict):
 
 
 def plot_most_common_pollutants(dammed_most_potent, undammed_most_potent):
+    '''
+        Plots side by side bar chart of 15 most common pollutants for
+        dammed and natural rivers.
+
+        ARGS:
+            dammed_most_potent, undammed_mot_potent - dictionaries with keys = pollutants,
+            values = counts of pollutants
+        Returns:
+            None
+    '''
 
     x_list = []
     for k, v in dammed_most_potent.items():
@@ -112,6 +134,15 @@ def plot_most_common_pollutants(dammed_most_potent, undammed_most_potent):
 
 
 def plot_simple_bar(figsize, dict_list, title, ylabel, labels):
+    '''
+        Plots multicolored bar chart with legend
+
+        ARGS:
+            figsize - tuple. Figsize of output chart
+            dict_list - list of dictionaries
+            title, ylabel - str
+            labels - list of strings. Titles of each colored section
+    '''
 
     fig, ax = plt.subplots(figsize=figsize)
     i = 0
@@ -137,5 +168,3 @@ def plot_simple_bar(figsize, dict_list, title, ylabel, labels):
     rects = [plt.Rectangle((0,0),1,1, color=colors[label]) for label in labels]
     plt.legend(rects, labels)
     plt.show()
-
-
